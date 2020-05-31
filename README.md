@@ -51,7 +51,7 @@
 
 ## Description
 
-This template was coded in Typescript, and have a login how integrates with that backend: https://github.com/ArthurPedroti/node-backend-template
+This template was coded in Typescript, and have a login system how integrates with this backend: https://github.com/ArthurPedroti/node-backend-template
 
 ## :computer: Languages
 
