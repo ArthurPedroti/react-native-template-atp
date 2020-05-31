@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to my React Native Template 👋</h1>
 <h1 align="center">
-  <img alt="Arthur Pedroti" src=".template/src/assets/template.png" width="400px" style="border-radius:16px;"/>
+  <img alt="Arthur Pedroti" src="template/src/assets/template.png" width="400px" style="border-radius:16px;"/>
 </h1>
 
 <h3 align="center" >
