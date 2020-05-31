@@ -61,12 +61,6 @@
     "react-test-renderer": "16.11.0",
     "typescript": "^3.8.3"
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
-    }
-  },
   "jest": {
     "preset": "react-native",
     "moduleFileExtensions": [

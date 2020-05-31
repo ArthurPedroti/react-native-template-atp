@@ -1,22 +1,23 @@
+<h1 align="center">Welcome to my React Native Template 👋</h1>
 <h1 align="center">
-  <img alt="Go Barber" src="./src/assets/gobarber-mobile.PNG" width="400px" style="border-radius:16px;"/>
+  <img alt="Arthur Pedroti" src=".template/src/assets/template.png" width="400px" style="border-radius:16px;"/>
 </h1>
 
 <h3 align="center" >
-  An app o manage appointments at a barbershop
+  A template for React Native projects
 </h3>
 
 <p align="center">
-  <img alt="Languagues" src="https://img.shields.io/github/languages/count/ArthurPedroti/gobarber-frontend">
-  <img alt="Top Languague" src="https://img.shields.io/github/languages/top/ArthurPedroti/gobarber-frontend">
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/ArthurPedroti/gobarber-frontend">
-  <a href="https://github.com/ArthurPedroti/gobarber-frontend/commits/master">
-    <img alt="Last commit date" src="https://img.shields.io/github/last-commit/ArthurPedroti/gobarber-frontend">
+  <img alt="Languagues" src="https://img.shields.io/github/languages/count/ArthurPedroti/react-native-template-atp">
+  <img alt="Top Languague" src="https://img.shields.io/github/languages/top/ArthurPedroti/react-native-template-atp">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/ArthurPedroti/react-native-template-atp">
+  <a href="https://github.com/ArthurPedroti/react-native-template-atp/commits/master">
+    <img alt="Last commit date" src="https://img.shields.io/github/last-commit/ArthurPedroti/react-native-template-atp">
   </a>
-   <a href="https://github.com/ArthurPedroti/gobarber-frontend/issues">
-    <img alt="Repository issues" src="https://img.shields.io/github/issues/ArthurPedroti/gobarber-frontend">
+   <a href="https://github.com/ArthurPedroti/react-native-template-atp/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/ArthurPedroti/react-native-template-atp">
   </a>
-  <img alt="License" src="https://img.shields.io/github/license/ArthurPedroti/gobarber-frontend">
+  <img alt="License" src="https://img.shields.io/github/license/ArthurPedroti/react-native-template-atp">
 </p>
 <p align="center">
 
@@ -40,12 +41,17 @@
 </p>
 
 <p align="center">
+  <a href="#Description">Description</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#computer-languages">Languages</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#books-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#install">Install</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#books-usage">Usage</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-license">License</a>
 </p>
+
+## Description
+
+This template was coded in Typescript, and have a login how integrates with that backend: https://github.com/ArthurPedroti/node-backend-template
 
 ## :computer: Languages
 
@@ -58,19 +64,18 @@
 - **#Prettier**
 - **#Styled-Components**
 - **#unForm**
-
 ## Install
 
+After init this template you will need add a git repository and reinstall husky.
+
 ```sh
-yarn android
-or
-yarn ios
+npx react-native init NameOfYourProject --template react-native-template-atp
 ```
 
 ## Usage
 
 ```sh
-yarn start
+yarn android or yarn ios
 ```
 
 ## Author
@@ -82,7 +87,7 @@ yarn start
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/ArthurPedroit/gobarber-frontend/issues). You can also take a look at the [contributing guide](https://github.com/ArthurPedroit/gobarber-frontend/blob/master/CONTRIBUTING.md).
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/ArthurPedroit/Template/issues). You can also take a look at the [contributing guide](https://github.com/ArthurPedroit/Template/blob/master/CONTRIBUTING.md).
 
 ## Show your support
 
@@ -91,7 +96,7 @@ Give a ⭐️ if this project helped you!
 ## 📝 License
 
 Copyright © 2020 [Arthur Pedroti](https://github.com/ArthurPedroti).<br />
-This project is [MIT](https://github.com/ArthurPedroit/gobarber-frontend/blob/master/LICENSE) licensed.
+This project is [MIT](https://github.com/ArthurPedroit/Template/blob/master/LICENSE) licensed.
 
 ---
 
