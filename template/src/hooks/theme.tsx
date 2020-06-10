@@ -4,69 +4,59 @@ import React, {
   useState,
   useContext,
   useEffect,
+  useMemo,
 } from 'react';
 import AsyncStorage from '@react-native-community/async-storage';
-import api from '../services/api';
+
+import light from '../styles/themes/light';
+import dark from '../styles/themes/dark';
 
 interface ThemeState {
   theme: 'dark' | 'light';
 }
 
-interface SignInCredentials {
-  email: string;
-  password: string;
-}
-
-interface ThemeContextTheme {
-  user: object;
-  signIn(credentials: SignInCredentials): Promise<void>;
-  signOut(): void;
+interface ThemeContextData {
+  theme: object;
+  toggleTheme(): Promise<void>;
   loading: boolean;
 }
 
-const ThemeContext = createContext<ThemeContextTheme>({} as ThemeContextTheme);
+const ThemeContext = createContext<ThemeContextData>({} as ThemeContextData);
 
 const ThemeProvider: React.FC = ({ children }) => {
-  const [theme, setTheme] = useState<ThemeState>({} as ThemeState);
+  const [theme, setTheme] = useState(dark);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    async function loadStorageTheme(): Promise<void> {
-      const storageTheme = await AsyncStorage.getItem('@HelloWorld:theme');
-
-      if (storageTheme) {
-        setTheme(JSON.parse(storageTheme));
+    async function loadStorageData(): Promise<void> {
+      const response = await AsyncStorage.getItem('@Template:theme');
+      if (response) {
+        setTheme(JSON.parse(response));
       }
+
+      setLoading(false);
     }
 
-    loadStorageTheme();
+    loadStorageData();
   }, []);
 
-  const signIn = useCallback(async ({ email, password }) => {
-    const response = await api.post('sessions', {
-      email,
-      password,
-    });
+  const toggleTheme = useCallback(async () => {
+    setTheme(theme.title === 'light' ? dark : light);
+    await AsyncStorage.setItem('@Template:theme', JSON.stringify(theme));
+  }, [theme]);
 
-    const { token, user } = response.theme;
-
-    await AsyncStorage.multiSet([
-      ['@HelloWorld:token', token],
-      ['@HelloWorld:user', JSON.stringify(user)],
-    ]);
-
-    setTheme({ token, user });
-  }, []);
+  const value = useMemo(() => ({ theme, toggleTheme, loading }), [
+    theme,
+    toggleTheme,
+    loading,
+  ]);
 
   return (
-    <ThemeContext.Provider
-      value={{ user: theme.user, signIn, signOut, loading }}
-    >
-      {children}
-    </ThemeContext.Provider>
+    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
   );
 };
 
-function useTheme(): ThemeContextTheme {
+function useTheme(): ThemeContextData {
   const context = useContext(ThemeContext);
 
   if (!context) {

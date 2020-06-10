@@ -13,14 +13,9 @@ import AppProvider from './hooks';
 import Routes from './routes';
 
 const App: React.FC = () => {
-  // const [theme, setTheme] = useState(dark);
-
-  // const toggleTheme = useCallback(() => {
-  //   setTheme(theme.title === 'dark' ? light : dark);
-  // }, [theme]);
-
   return (
     <NavigationContainer>
+      {/* tem que passar o thema inteiro e não um texto */}
       <ThemeProvider theme={dark}>
         <StatusBar barStyle="light-content" backgroundColor="#312e38" />
         <AppProvider>

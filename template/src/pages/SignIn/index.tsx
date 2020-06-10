@@ -32,6 +32,7 @@ import {
   CreateAccountButton,
   CreateAccountButtonText,
 } from './styles';
+import { useTheme } from '../../hooks/theme';
 
 interface SignInFormData {
   email: string;
@@ -45,6 +46,7 @@ const SignIn: React.FC = () => {
   const navigation = useNavigation();
 
   const { signIn } = useAuth();
+  const { toggleTheme } = useTheme();
 
   const handleSignIn = useCallback(
     async (data: SignInFormData) => {
@@ -98,6 +100,13 @@ const SignIn: React.FC = () => {
             <View>
               <Title>Faça seu logon</Title>
             </View>
+            <Button
+              onPress={() => {
+                toggleTheme();
+              }}
+            >
+              tema
+            </Button>
 
             <Form ref={formRef} onSubmit={handleSignIn}>
               <Input
