@@ -70,6 +70,8 @@ After init this template you will need add a git repository and reinstall husky.
 
 ```sh
 npx react-native init NameOfYourProject --template react-native-template-atp
+or
+npx react-native init NameOfYourProject --template atp
 ```
 
 ## Usage
